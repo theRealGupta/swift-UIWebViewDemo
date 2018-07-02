@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sh1-BT-E6y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller3-->
+        <scene sceneID="o1n-hx-2MA">
+            <objects>
+                <viewController id="sh1-BT-E6y" customClass="ViewController3" customModule="webViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avh-Q9-Pcs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tA-Ei-Xvo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sh1-BT-E6y" id="rRY-7M-0LW"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eF3-Gw-Laz">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geekGuns" translatesAutoresizingMaskIntoConstraints="NO" id="fek-5c-Qjj">
+                                <rect key="frame" x="67" y="519" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ypi-nY-ciV"/>
+                                    <constraint firstAttribute="width" constant="240" id="vU7-R6-huC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26984999999999998" green="0.73392000000000002" blue="0.24249000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eF3-Gw-Laz" firstAttribute="centerY" secondItem="avh-Q9-Pcs" secondAttribute="centerY" id="0IB-nm-ck5"/>
+                            <constraint firstItem="AIP-mP-l0P" firstAttribute="trailing" secondItem="2tA-Ei-Xvo" secondAttribute="trailing" id="884-xu-Hta"/>
+                            <constraint firstItem="2tA-Ei-Xvo" firstAttribute="top" secondItem="AIP-mP-l0P" secondAttribute="top" constant="44" id="Mes-eK-zNb"/>
+                            <constraint firstItem="2tA-Ei-Xvo" firstAttribute="leading" secondItem="AIP-mP-l0P" secondAttribute="leading" id="Yb2-K4-U4e"/>
+                            <constraint firstItem="AIP-mP-l0P" firstAttribute="bottom" secondItem="fek-5c-Qjj" secondAttribute="bottom" constant="20" id="jYZ-7S-dSq"/>
+                            <constraint firstItem="fek-5c-Qjj" firstAttribute="centerX" secondItem="avh-Q9-Pcs" secondAttribute="centerX" id="uNv-XS-7KY"/>
+                            <constraint firstItem="AIP-mP-l0P" firstAttribute="bottom" secondItem="2tA-Ei-Xvo" secondAttribute="bottom" id="xjH-uz-xbh"/>
+                            <constraint firstItem="eF3-Gw-Laz" firstAttribute="centerX" secondItem="avh-Q9-Pcs" secondAttribute="centerX" id="zbj-pm-2hK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AIP-mP-l0P"/>
+                    </view>
+                    <connections>
+                        <outlet property="geekGunsLogo" destination="fek-5c-Qjj" id="VC4-MK-s8S"/>
+                        <outlet property="loadSpinner" destination="eF3-Gw-Laz" id="5LO-sx-sND"/>
+                        <outlet property="webView" destination="2tA-Ei-Xvo" id="OO5-GQ-yHU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IN0-Ef-x3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="geekGuns" width="429" height="193"/>
+    </resources>
+</document>
